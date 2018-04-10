@@ -1,0 +1,19 @@
+#header{
+    padding: 20px;
+    background: rgb(148, 148, 148);
+    color: white;
+}
+#left{
+    display: inline-block;
+    vertical-align: top;
+    height: 755px;
+}
+#right{
+    display: inline-block;
+    vertical-align: top;
+    height: 755px;    
+}
+h6{
+    font-style: italic;
+    font-size: small;
+}

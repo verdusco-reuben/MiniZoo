@@ -1,0 +1,35 @@
+<h3>Know of a pet needing a home?</h3>
+<form (submit)="newPetForm()" method="post">
+  <div class="card">
+    <div class="card-content">
+      <div id="left">
+        <p>Basic Info:</p>
+        <hr>
+        <p>Pet Name:</p>
+        <input type="text" name="name" [(ngModel)]="newpet.name" required minlength=3/>
+        <p>Pet type:</p>
+        <input type="text" name="type" [(ngModel)]="newpet.type" />
+        <p>Description:</p>
+        <input type="text" name="description" [(ngModel)]="newpet.description" />
+      </div>
+      <div id="center">
+        <p>Skills:</p>
+        <hr>
+        <ul>
+          <li><p>Skill 1:</p><input type="text" name="skills_1" [(ngModel)]="newpet.skills_1" /></li>
+          <li><p>Skill 2:</p><input type="text" name="skills_2" [(ngModel)]="newpet.skills_2" /></li>
+          <li><p>Skill 3:</p><input type="text" name="skills_3" [(ngModel)]="newpet.skills_3" /></li>
+        </ul>
+      </div>
+      <div id="right">
+        <div *ngIf="errors">
+          <div *ngFor="let x of errors">
+            <span>{{x}}</span>
+          </div>
+        </div>
+        <br><br>
+        <button class="btn waves-effect waves-light"  type="submit">Add pet<i class="material-icons right">send</i></button>  <button class="btn waves-effect waves-light" [routerLink]="['/home']">Cancel<i class="material-icons right">cancel</i></button>
+      </div>
+    </div>
+  </div>
+</form>

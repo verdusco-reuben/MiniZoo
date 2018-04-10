@@ -1,0 +1,34 @@
+<h3>Edit this {{pet.type}}</h3>
+
+<form (submit)="submitEdits()" method="post">
+    <div class="card">
+        <div class="card-content">
+  <div id="left">
+    <p>Basic Info:</p>
+    <hr>
+    <p>Pet Name:</p><input type="text" name="name" [(ngModel)]="pet.name" value="{{pet.name}}" /><br>
+    <p>Pet type:</p><input type="text" name="type" [(ngModel)]="pet.type" value="{{pet.type}}" /><br>
+    <p>Description:</p><input type="text" name="description" [(ngModel)]="pet.description" value="{{pet.description}}" /><br>
+  </div>
+  <div id="center">
+    <p>Skills:</p>
+    <hr>
+    <ul>
+      <li><p>Skill 1:</p><input type="text" name="skills_1" [(ngModel)]="pet.skills[0]" value="{{pet.skills[0]}}" /></li>
+      <li><p>Skill 2:</p><input type="text" name="skills_2" [(ngModel)]="pet.skills[1]" value="{{pet.skills[1]}}" /></li>
+      <li><p>Skill 3:</p><input type="text" name="skills_3" [(ngModel)]="pet.skills[2]" value="{{pet.skills[2]}}" /></li>
+    </ul>
+  </div>
+  <div id="right"> 
+    <div *ngIf="errors">
+        <div *ngFor="let x of errors">
+          <span>{{x}}</span>
+        </div>
+    </div>
+    <br>
+    <button class="btn waves-effect waves-light" type="submit">Edit Pet<i class="material-icons right">send</i></button>
+      <button class="btn waves-effect waves-light" [routerLink]="['/home']">Cancel<i class="material-icons right">cancel</i></button>
+  </div>
+  </div>
+  </div>
+</form>

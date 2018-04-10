@@ -1,0 +1,32 @@
+<div id="head">
+    <h3>Details about {{singlepet.name}}</h3>
+<a [routerLink]="['/home']">Home</a>
+</div>
+<section class="row">
+<div class="col l5">
+        <div class="card">
+        <div class="card-content">
+                <div id="left">
+                        <p><span>Pet Type: </span></p>
+                        <p><span>Description: </span></p>
+                        <p><span>Likes: </span></p>
+                        <p><span>Skills:</span></p>
+                </div>
+                <div id="right">
+                        <p>{{singlepet.type}}</p>
+                        <p>{{singlepet.description}}</p>
+                        <p>{{singlepet.likes}}</p>
+                        <p>{{singlepet.skills[0]}}</p>
+                        <p>{{singlepet.skills[1]}}</p>
+                        <p>{{singlepet.skills[2]}}</p>
+                </div>
+                <br><br>
+                <br>
+                <button *ngIf="!already_clicked" (click)="likeThisPet(singlepet._id)" id="like">Like this pet</button> 
+                <button (click)="adoptMe(singlepet._id)" id="adopt">Adopt this pet!</button>
+        </div>
+        </div>
+</div>
+</section>
+<br>
+<br>

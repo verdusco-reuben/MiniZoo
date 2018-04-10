@@ -1,0 +1,33 @@
+
+form{
+    width: 715px;
+    padding: 30px;
+    margin-left: 100px;
+}
+
+input{
+    border-radius: 5px;
+}
+button{
+    margin: 10px;
+}
+span{
+    color: #9854ff;
+}
+ul{
+    list-style: none;
+}
+#left{
+    display: inline-block;
+    vertical-align: top;
+} 
+#center{
+    margin-left: 50px;
+    display: inline-block;
+    vertical-align: top;
+}
+#right{
+    margin-left: 50px;
+    display: inline-block;
+    vertical-align: top;
+}

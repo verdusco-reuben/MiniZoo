@@ -1,0 +1,35 @@
+<br>
+<h3>These pets are looking for a home!!!</h3>
+<br>
+<section class="row">
+  <div class="col l6">
+    <div class="card">
+      <div class="card-content">
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Actions</th>
+          </tr>
+          <tr *ngFor="let x of all_pets">
+            <td>{{x.name}}</td>
+            <td>{{x.type}}</td>
+            <td><button id="details" [routerLink]="['/details',x._id]">Details</button><button id="edit" [routerLink]="['/edit',x._id]">Edit</button></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col l5">
+      <div class="card">
+        <div class="card-content">
+          <img src={{dogpic}}>
+          <br>
+          <br>
+          <br>
+          <button id="addnew" [routerLink]="['/new']">Add a new pet to the shelter database!</button>
+      </div>
+    </div>
+  </div>
+</section>
+
